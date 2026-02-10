@@ -35,6 +35,12 @@ export const handleBFHL = async (req, res, next) => {
     let result;
 
     if (key === "fibonacci") {
+      if (value > 1000) {
+        return res.status(400).json(
+          fail(EMAIL, "Input too large")
+        );
+      }
+
       result = fibonacci(value);
 
     } else if (key === "prime") {
