@@ -8,6 +8,6 @@ const router = express.Router();
 
 router.post("/", handleBFHL);
 
-router.get("/", healthCheck);
+// router.get("/", healthCheck);
 
 export default router;
